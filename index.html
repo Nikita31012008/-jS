@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Кабинет</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab(event, 'about')">О себе</button>
+            <button class="tab-btn" onclick="switchTab(event, 'something')">Что-нибудь</button>
+            <button class="tab-btn" onclick="switchTab(event, 'api')">Пример работы с API</button>
+        </div>
+
+        <div id="about" class="tab-content active">
+            <p class="fade-in">Меня зовут Никита на момент 2026 года я учусь на специальности программиста второго курса большой уклон у меня на фронтент разработчика в детстве пытался создать свой MTA проект</p>
+        </div>
+
+        <div id="something" class="tab-content">
+            <div class="input-group fade-in">
+                <input type="text" placeholder="Жду твоего запроса">
+                <button class="btn-submit">тыкни</button>
+            </div>
+        </div>
+
+        <div id="api" class="tab-content">
+            <div class="fade-in">
+                <h2>Запрос к API</h2>
+                <p class="api-text">нажми на кнопку и получи цвет</p>
+                
+                <button class="btn-api" onclick="generateRandomColor()">рандом цвет</button>
+
+                <div class="api-result-box" id="colorResultBox" style="display: none;">
+                    <div class="api-status-title">Новый цвет сгенерирован</div>
+                    <div class="expert-badge">
+                        <div class="color-preview-block" id="colorPreview"></div>
+                        <div class="expert-info">
+                            <div class="expert-name">Название: <span id="colorName">#00f2fe</span></div>
+                            <div class="expert-quote">ID цвета: <span id="colorId">#00f2fe</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
