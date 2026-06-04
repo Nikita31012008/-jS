@@ -22,9 +22,10 @@
 
         <div id="something" class="tab-content">
             <div class="input-group fade-in">
-                <input type="text" placeholder="Жду твоего запроса">
-                <button class="btn-submit">тыкни</button>
+                <input type="text" id="somethingInput" placeholder="Жду твоего запроса">
+                <button class="btn-submit" onclick="handleSomethingSubmit()">тыкни</button>
             </div>
+            <div id="somethingResult" class="fade-in" style="display: none; margin-top: 20px; padding: 15px; background: #14141c; border: 1px solid #222232; border-radius: 10px; font-size: 14px;"></div>
         </div>
 
         <div id="api" class="tab-content">
@@ -35,7 +36,7 @@
                 <button class="btn-api" onclick="generateRandomColor()">рандом цвет</button>
 
                 <div class="api-result-box" id="colorResultBox" style="display: none;">
-                    <div class="api-status-title">Новый цвет сгенерирован</div>
+                    <div class="api-status-title" id="apiStatus">Новый цвет сгенерирован</div>
                     <div class="expert-badge">
                         <div class="color-preview-block" id="colorPreview"></div>
                         <div class="expert-info">
